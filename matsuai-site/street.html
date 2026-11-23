@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>松合 | 通りを歩く</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- 360度ビューア Pannellum(無料のライブラリ) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/street.css">
+</head>
+<body>
+
+  <div id="pano"></div>
+
+  <header class="site-header dark">
+    <a class="logo" href="index.html">松合</a>
+    <div id="place">松合の通り</div>
+  </header>
+
+  <div class="hint">ドラッグで見回す ・ 光る目印をタップ</div>
+
+  <!-- 商品やお品書きを表示するウィンドウ -->
+  <div class="modal" id="modal">
+    <div class="card">
+      <button class="close" aria-label="閉じる">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/street.js"></script>
+</body>
+</html>
