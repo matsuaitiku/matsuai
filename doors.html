@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>松合 | 蔵の扉をひらく</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/doors.css">
+</head>
+<body>
+
+  <header class="site-header dark">
+    <a class="logo" href="index.html">松合</a>
+    <nav>
+      <ul>
+        <li><a href="street.html">通りを歩く</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="lead">
+    <div class="en">Open a door, step inside</div>
+    <h1>蔵の扉をひらく</h1>
+  </div>
+
+  <!-- 土蔵の通り。data-room に、開いたときに表示する部屋の名前を書く -->
+  <main class="street">
+
+    <button class="kura" data-room="history">
+      <div class="roof"></div>
+      <div class="wall">
+        <div class="fuda">歴史</div>
+        <div class="door"><div class="leaf l"></div><div class="leaf r"></div></div>
+      </div>
+      <div class="base"></div>
+    </button>
+
+    <button class="kura" data-room="food">
+      <div class="roof"></div>
+      <div class="wall">
+        <div class="fuda">食と醸造</div>
+        <div class="door"><div class="leaf l"></div><div class="leaf r"></div></div>
+      </div>
+      <div class="base"></div>
+    </button>
+
+    <button class="kura" data-room="stay">
+      <div class="roof"></div>
+      <div class="wall">
+        <div class="fuda">宿</div>
+        <div class="door"><div class="leaf l"></div><div class="leaf r"></div></div>
+      </div>
+      <div class="base"></div>
+    </button>
+
+    <button class="kura" data-room="access">
+      <div class="roof"></div>
+      <div class="wall">
+        <div class="fuda">アクセス</div>
+        <div class="door"><div class="leaf l"></div><div class="leaf r"></div></div>
+      </div>
+      <div class="base"></div>
+    </button>
+
+    <!-- 蔵を増やすときは、上の <button class="kura"> 〜 </button> をコピーして、
+         data-room と木札の文字を変え、下に同じ名前の <section class="room"> を足す -->
+  </main>
+
+  <!-- ===== 蔵の中のページ ===== -->
+  <button class="back" id="back">← 蔵を出る</button>
+
+  <section class="room" id="room-history">
+    <h2>歴史</h2>
+    <div class="body">
+      <div class="en">History</div>
+      <p>八代海に面した松合は、江戸時代から明治にかけて、漁業や海運、醸造の町として栄えました。</p>
+      <p class="todo">ここに写真・年表・町の人の話を入れる</p>
+    </div>
+  </section>
+
+  <section class="room" id="room-food">
+    <h2>食と醸造</h2>
+    <div class="body">
+      <div class="en">Food &amp; Brewing</div>
+      <p class="todo">ここに蔵元・お店・朝市・地元の味の紹介を入れる</p>
+    </div>
+  </section>
+
+  <section class="room" id="room-stay">
+    <h2>宿</h2>
+    <div class="body">
+      <div class="en">Stay</div>
+      <p class="todo">ここに民宿の紹介・DIYの記録・予約方法を入れる</p>
+    </div>
+  </section>
+
+  <section class="room" id="room-access">
+    <h2>アクセス</h2>
+    <div class="body">
+      <div class="en">Access</div>
+      <p>熊本県宇城市不知火町松合</p>
+      <p class="todo">ここに行き方・駐車場・地図を入れる</p>
+    </div>
+  </section>
+
+  <script src="js/doors.js"></script>
+</body>
+</html>

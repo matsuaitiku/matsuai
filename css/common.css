@@ -1,0 +1,94 @@
+/* =========================================================
+   common.css:全ページ共通のデザイン
+   色やフォントはここの変数を変えると、サイト全体に反映される
+   ========================================================= */
+
+:root {
+  /* 色(実際の白壁・瓦・海の写真から色を拾って調整するとよい) */
+  --plaster: #f2eee6;   /* 漆喰の白 */
+  --tile: #5d6672;      /* 瓦 */
+  --wood: #3b2f26;      /* 焼杉・柱 */
+  --sea: #3f5d78;       /* 八代海 */
+  --ink: #2a2119;       /* 文字(墨) */
+  --sub: #7d7064;       /* 薄い文字 */
+  --accent: #9a7444;    /* アクセント */
+
+  /* フォント */
+  --font-ja: "Noto Serif JP", serif;
+  --font-en: "Cormorant Garamond", serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-ja);
+  color: var(--ink);
+  background: var(--plaster);
+  line-height: 1.9;
+}
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ---------- ヘッダー(全ページ共通) ---------- */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5vw;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+}
+.site-header .logo {
+  font-weight: 600;
+  letter-spacing: 0.4em;
+  text-decoration: none;
+}
+.site-header nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.site-header nav a {
+  text-decoration: none;
+  color: var(--sub);
+  transition: color 0.3s;
+}
+.site-header nav a:hover { color: var(--ink); }
+
+/* 暗い背景のページではヘッダーを白文字にする */
+.site-header.dark { color: var(--plaster); }
+.site-header.dark nav a { color: #b9b2a8; }
+.site-header.dark nav a:hover { color: #fff; }
+
+/* ---------- よく使う部品 ---------- */
+.en {                       /* 英語の小見出し */
+  font-family: var(--font-en);
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+.link-arrow {               /* 「〜 →」のリンク */
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+}
+.todo {                     /* あとで書き換える場所の目印(完成したら消す) */
+  color: #8d7c69;
+  font-size: 13px;
+  border-left: 2px solid #c9b496;
+  padding-left: 10px;
+}
+
+/* ---------- スマホ ---------- */
+@media (max-width: 760px) {
+  .site-header nav ul { display: none; }
+  /* TODO:スマホ用のメニュー(ハンバーガーメニューなど)を作る */
+}
